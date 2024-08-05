@@ -1,0 +1,13 @@
+{
+  "name": "@hev-admin/client",
+  "type": "module",
+  "version": "0.5.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
