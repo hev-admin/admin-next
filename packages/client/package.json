@@ -8,6 +8,32 @@
   "keywords": [],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
+    "@vueuse/core": "^10.11.0",
+    "element-plus": "^2.7.8",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.2.1",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.4.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@iconify/json": "^2.2.234",
+    "@unocss/preset-rem-to-px": "^0.61.9",
+    "@vitejs/plugin-legacy": "^5.4.1",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "unocss": "^0.61.9",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-imagemin": "^0.5.20",
+    "unplugin-vue-components": "^0.27.3",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-mkcert": "^1.17.5",
+    "vite-plugin-obfuscator": "^1.0.5",
+    "vite-plugin-vue-devtools": "^7.3.7"
   }
 }

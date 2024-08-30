@@ -7,7 +7,7 @@ hero:
   text: "新颖、全面、简洁\n全栈后台管理模板"
   tagline: My great project tagline
   image:
-    src: /hev_admin_logo.svg
+    src: /favicon.svg
     alt: Hev Admin Logo
   actions:
     - theme: brand
