@@ -59,6 +59,12 @@ export default defineConfig(({ mode }) => {
               ['default', 'dayjs'],
             ],
           },
+          {
+            'vue-i18n': [
+              'createI18n',
+              'useI18n',
+            ],
+          },
         ],
         resolvers: [
           ElementPlusResolver(),
