@@ -1,13 +1,13 @@
 import App from './App.vue'
 import { setupRouter } from './router'
-import { setupStore } from './stores'
+import { setupStore } from './store'
 import { setupGlobalComponent } from '@/components'
 
 // import '@unocss/reset/tailwind.css'
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import 'nprogress/nprogress.css'
-import '@/styles/common.scss'
+import '@/style/common.scss'
 import 'virtual:uno.css'
 
 async function setupApp() {

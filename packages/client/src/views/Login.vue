@@ -3,7 +3,7 @@ import { useStorage } from '@vueuse/core'
 import { CircleCheck, Lock, User } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import loginPicture from '@/assets/images/login.svg'
-import { useAuthStore } from '@/stores'
+import { useAuthStore } from '@/store'
 import { getStorage, setStorage, throttle } from '@/utils'
 import { login } from '@/api'
 

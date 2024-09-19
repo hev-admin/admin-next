@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { ElMessage, ElMessageBox } from 'element-plus'
-import { pinia, useAuthStore } from '@/stores'
+import { pinia, useAuthStore } from '@/store'
 
 const SUCCESS_CODES = [0, 200]
 

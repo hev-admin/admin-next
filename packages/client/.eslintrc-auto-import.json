@@ -75,6 +75,7 @@
     "watchPostEffect": true,
     "watchSyncEffect": true,
     "createI18n": true,
-    "useI18n": true
+    "useI18n": true,
+    "createMemoryHistory": true
   }
 }

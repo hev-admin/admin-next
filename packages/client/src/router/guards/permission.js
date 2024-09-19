@@ -1,4 +1,4 @@
-import { pinia, useAuthStore, usePermissionStore, useUserStore } from '@/stores'
+import { pinia, useAuthStore, usePermissionStore, useUserStore } from '@/store'
 import { validateMenuPath } from '@/api'
 
 const WHITE_LIST = ['/login', '/404']

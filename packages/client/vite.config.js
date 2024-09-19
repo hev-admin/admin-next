@@ -45,6 +45,7 @@ export default defineConfig(({ mode }) => {
             'vue-router': [
               'createRouter',
               'createWebHashHistory',
+              'createMemoryHistory',
               'createWebHistory',
             ],
           },

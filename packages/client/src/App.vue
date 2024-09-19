@@ -1,7 +1,7 @@
 <script setup>
 // import { useFullscreen } from '@vueuse/core'
 import { SettingsDrawer } from '@/components'
-import { useAppStore, useTabStore } from '@/stores'
+import { useAppStore, useTabStore } from '@/store'
 
 // TODO: multiple layouts and switch layout
 
