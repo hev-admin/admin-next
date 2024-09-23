@@ -5,11 +5,13 @@ export const useAuthStore = defineStore('auth', {
   state: () => ({
     accessToken: null,
   }),
-  getter: {
+  getters: {
     token() {
       if (!this.accessToken && getStorage('accessToken')) {
         this.setToken({ accessToken: getStorage('accessToken') })
       }
+      console.log(this.accessToken)
+
       return this.accessToken
     },
   },

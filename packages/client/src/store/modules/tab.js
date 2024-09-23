@@ -1,5 +1,12 @@
 export const useTabStore = defineStore('tab', {
-  state: () => ({
-    tabs: [],
-  }),
+  state() {
+    return {
+      tabs: [],
+    }
+  },
+  actions: {
+    resetTabs() {
+      this.tabs = []
+    },
+  },
 })
