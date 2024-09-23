@@ -6,7 +6,7 @@ const WHITE_LIST = ['/login', '/404']
 export function createPermissionGuard(router) {
   router.beforeEach(async (to) => {
     const authStore = useAuthStore(pinia)
-    const token = authStore.accessToken
+    const token = authStore.token
 
     if (!token) {
       if (WHITE_LIST.includes(to.path)) {
@@ -18,6 +18,7 @@ export function createPermissionGuard(router) {
     if (to.path === '/login') {
       return { path: '/' }
     }
+
     if (WHITE_LIST.includes(to.path)) {
       return true
     }

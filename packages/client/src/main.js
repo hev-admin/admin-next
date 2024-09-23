@@ -1,7 +1,8 @@
 import App from './App.vue'
-import { setupRouter } from './router'
-import { setupStore } from './store'
+import { setupRouter } from '@/router'
+import { setupStore } from '@/store'
 import { setupGlobalComponent } from '@/components'
+import { setupI18n } from '@/locales'
 
 // import '@unocss/reset/tailwind.css'
 import 'element-plus/dist/index.css'
@@ -16,6 +17,7 @@ async function setupApp() {
   setupStore(app)
   setupGlobalComponent(app)
   setupRouter(app)
+  setupI18n(app)
 
   app.mount('#app')
 }

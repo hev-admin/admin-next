@@ -1,9 +1,18 @@
 import { usePermissionStore, useRouterStore, useTabStore, useUserStore } from '@/store'
+import { getStorage } from '@/utils'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
     accessToken: null,
   }),
+  getter: {
+    token() {
+      if (!this.accessToken && getStorage('accessToken')) {
+        this.setToken({ accessToken: getStorage('accessToken') })
+      }
+      return this.accessToken
+    },
+  },
   actions: {
     setToken({ accessToken }) {
       this.accessToken = accessToken
