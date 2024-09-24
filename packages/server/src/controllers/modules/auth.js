@@ -98,7 +98,17 @@ async function login(ctx, next) {
   await next()
 }
 
+export async function getPermissionsTree(ctx, next) {
+  ctx.status = 200
+  ctx.body = {
+    code: 200,
+    message: 'bing bong.',
+  }
+  await next()
+}
+
 export default {
   'get /auth/captcha': captcha,
   'post /auth/login': login,
+  'get /auth/permissions/tree': getPermissionsTree,
 }

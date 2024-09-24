@@ -48,5 +48,6 @@
     "postcss"
   ],
   "todo-tree.tree.showBadges": true,
-  "todo-tree.tree.showCountsInTree": true
+  "todo-tree.tree.showCountsInTree": true,
+  "i18n-ally.localesPaths": []
 }

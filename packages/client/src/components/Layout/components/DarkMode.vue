@@ -1,7 +1,7 @@
 <script setup>
 import { Moon, Sunny } from '@element-plus/icons-vue'
 import { useDark, useToggle } from '@vueuse/core'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 const isDark = useDark()

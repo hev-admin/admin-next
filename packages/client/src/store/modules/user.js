@@ -3,10 +3,13 @@ import { getUser } from '@/api'
 export const useUserStore = defineStore('user', {
   state() {
     return {
-      info: {},
+      userInfo: {},
     }
   },
   actions: {
+    setUserInfo(userInfo) {
+      this.userInfo = userInfo
+    },
     async getUserInfo() {
       const res = await getUser()
       const { id, username, profile, roles, currentRole } = res.data || {}

@@ -4,7 +4,7 @@ import FullScreen from './FullScreen.vue'
 import DarkMode from './DarkMode.vue'
 import LocaleIcon from './LocaleIcon.vue'
 import ConfigIcon from './ConfigIcon.vue'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 </script>

@@ -3,7 +3,7 @@
 import AppHeader from '../components/AppHeader.vue'
 import SideBar from '../components/SideBar.vue'
 import AppTab from '../components/AppTab.vue'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 </script>

@@ -1,6 +1,6 @@
 import App from './App.vue'
 import { setupRouter } from './router'
-import { setupStore } from './stores'
+import { setupStore } from './store'
 import { setupGlobalComponent } from '@/components'
 
 // import '@unocss/reset/tailwind.css'

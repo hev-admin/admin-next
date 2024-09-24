@@ -1,4 +1,4 @@
-import { usePermissionStore, useRouterStore, useTabStore, useUserStore } from '@/stores'
+import { usePermissionStore, useRouterStore, useTabStore, useUserStore } from '@/store'
 
 export const useAuthStore = defineStore('auth', {
   state: () => ({
