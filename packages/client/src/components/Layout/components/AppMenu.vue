@@ -1,5 +1,5 @@
 <script setup>
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/store'
 // import { isExternal } from '@/utils'
 
 // const router = useRouter()

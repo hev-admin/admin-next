@@ -13,7 +13,7 @@
     "seed": "node ./prisma/seed.js",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5175"
+    "preview": "node ./dist/main.js"
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",

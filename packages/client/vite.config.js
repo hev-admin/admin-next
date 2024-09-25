@@ -17,6 +17,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { generateEnv, generateProxy } from './scripts/helper'
 
 export default defineConfig(({ mode }) => {
+  console.log(mode)
   const {
     VITE_TITLE,
     VITE_BASE,
@@ -166,6 +167,12 @@ export default defineConfig(({ mode }) => {
       config.plugins = config.plugins.concat([
         Imagemin(),
       ])
+    }
+
+    // preview
+    config.preview = {
+      port: VITE_PORT || 5173,
+      proxy: generateProxy(VITE_PROXY),
     }
   }
 

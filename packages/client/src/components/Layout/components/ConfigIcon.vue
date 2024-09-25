@@ -1,6 +1,6 @@
 <script setup>
 import { Tools } from '@element-plus/icons-vue'
-import { useAppStore } from '@/stores'
+import { useAppStore } from '@/store'
 
 const appStore = useAppStore()
 </script>

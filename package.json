@@ -10,7 +10,9 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "npx simple-git-hooks",
-    "start": "concurrently -n Server,Client -c bgBlue,bgCyan \"pnpm server:dev\" \"pnpm client:dev\"",
+    "start": "pnpm build && concurrently -n Server,Client -c bgBlue,bgCyan \"pnpm server:preview\" \"pnpm client:preview\"",
+    "dev": "concurrently -n Server,Client -c bgBlue,bgCyan \"pnpm server:dev\" \"pnpm client:dev\"",
+    "build": "pnpm client:build && pnpm server:build",
     "client:dev": "pnpm -F @hev-admin/client dev",
     "client:build": "pnpm -F @hev-admin/client build",
     "client:preview": "pnpm -F @hev-admin/client preview",
