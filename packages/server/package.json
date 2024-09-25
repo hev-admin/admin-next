@@ -8,11 +8,12 @@
   "keywords": [],
   "main": "dist/app.js",
   "scripts": {
-    "postinstall": "node ./scripts/helper.js && prisma generate",
-    "migrate": "npx prisma migrate dev --name init",
+    "postinstall": "node ./scripts/helper.js",
+    "migrate": "npx prisma migrate dev --name init && prisma generate && pnpm seed",
+    "seed": "node ./prisma/seed.js",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5175"
+    "preview": "node ./dist/main.js"
   },
   "dependencies": {
     "@koa/cors": "^5.0.0",

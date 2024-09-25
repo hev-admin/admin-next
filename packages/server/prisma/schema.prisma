@@ -21,6 +21,7 @@ model User {
   nickName   String?
   realName   String?
   createTime DateTime @default(now())
+  updateTime DateTime @default(now())
 }
 
 model Permission {

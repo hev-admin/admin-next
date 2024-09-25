@@ -25,5 +25,8 @@ export const useUserStore = defineStore('user', {
         currentRole,
       }
     },
+    resetUser() {
+      this.info = {}
+    },
   },
 })
