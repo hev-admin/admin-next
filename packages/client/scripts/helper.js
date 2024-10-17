@@ -1,6 +1,6 @@
 import { resolve } from 'node:path'
-import { readFileSync } from 'node:fs'
 import { cwd } from 'node:process'
+import { readFileSync } from 'node:fs'
 
 export const getPackage = () => JSON.parse(readFileSync(resolve(cwd(), 'package.json'), 'utf-8'))
 

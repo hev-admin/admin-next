@@ -5,18 +5,6 @@ const compat = new FlatCompat()
 
 export default antfu(
   {
-    ignores: [
-      './packages/client/.eslintrc-auto-import.json',
-      '.editorconfig',
-      '.gitignore',
-      '.npmrc',
-      'LICENSE',
-      '**/.env*',
-      '**/*.svg',
-    ],
-    html: true,
-    json: true,
-    css: true,
     rules: {
       'no-console': 'off',
     },
@@ -27,7 +15,8 @@ export default antfu(
     ],
   }),
   {
-    files: ['./packages/client/**/*.{js.vue}', './docs/**/*.{md,js,vue}'],
+    files: ['./packages/client/**'],
+    vue: true,
     unocss: true,
   },
 )
