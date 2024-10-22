@@ -17,7 +17,6 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { generateEnv, generateProxy } from './scripts/helper'
 
 export default defineConfig(({ mode }) => {
-  console.log(mode)
   const {
     VITE_TITLE,
     VITE_BASE,
