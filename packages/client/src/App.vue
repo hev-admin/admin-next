@@ -35,14 +35,19 @@ const tabStore = useTabStore()
 const keepAliveNames = computed(() => {
   return tabStore.tabs.filter(item => item.keepAlive).map(item => item.name)
 })
+
+onMounted(() => {
+  const loadingStyle = document.querySelector('style[title=loading]')
+  loadingStyle?.remove()
+})
 </script>
 
 <template>
   <el-config-provider :locale="appStore.locale.component">
-    <router-view v-if="Layout" v-slot="{ Component, route: curRoute }">
+    <router-view v-if="Layout" v-slot="{ Component }">
       <component :is="Layout">
         <keep-alive :include="keepAliveNames">
-          <component :is="Component" :key="curRoute.fullPath" />
+          <component :is="Component" :key="route.fullPath" />
         </keep-alive>
       </component>
       <SettingsDrawer />

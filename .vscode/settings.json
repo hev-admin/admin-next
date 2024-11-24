@@ -55,6 +55,5 @@
   ],
   "i18n-ally.localesPaths": [
     "packages/client/src/locales"
-  ],
-  "i18n-ally.pathMatcher": "{locale}/*.json"
+  ]
 }

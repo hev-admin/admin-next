@@ -3,9 +3,9 @@ import notFound from '@/assets/images/not_found.svg'
 </script>
 
 <template>
-  <div w-full h-full flex="~ col" items-center pt-80>
+  <div flex="~ col" h-full w-full items-center pt-80>
     <img w-240 :src="notFound" alt="404">
-    <div text="28" font-bold pt-30 pb-60>
+    <div text="28" pb-60 pt-30 font-bold>
       您访问的页面不存在
     </div>
     <RouterLink to="/" :replace="true">

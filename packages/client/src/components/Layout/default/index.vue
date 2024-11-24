@@ -17,7 +17,7 @@ const appStore = useAppStore()
     >
       <SideBar />
     </aside>
-    <div w="0" flex="col 1">
+    <div flex="~ col 1">
       <AppHeader />
       <AppTab />
       <slot />

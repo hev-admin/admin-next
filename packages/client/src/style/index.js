@@ -1,5 +1,5 @@
 import 'element-plus/dist/index.css'
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import 'nprogress/nprogress.css'
-import './common.scss'
+import './common.css'
 import 'virtual:uno.css'

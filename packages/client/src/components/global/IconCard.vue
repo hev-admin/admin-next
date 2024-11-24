@@ -9,8 +9,8 @@ defineProps({
 
 <template>
   <div
-    flex items-center justify-center hover:bg="gray-300 dark:gray-800" cursor-pointer rounded-4
-    transition-all-300 :style="{ width: `${size}px`, height: `${size}px` }"
+    hover:bg="gray-300 dark:gray-800"
+    flex cursor-pointer items-center justify-center rounded-4 transition-all-300 :style="{ width: `${size}px`, height: `${size}px` }"
   >
     <slot />
   </div>

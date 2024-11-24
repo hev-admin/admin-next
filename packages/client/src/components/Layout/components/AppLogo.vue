@@ -6,7 +6,7 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <router-link h="50" flex items="center" justify="center" border-b="1px solid light-800 dark:gray-800" to="/">
+  <router-link h="50" flex items="center" justify="center" to="/">
     <main-logo size="24" />
     <div
       v-show="!appStore.menuCollapsed"
