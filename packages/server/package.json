@@ -8,9 +8,10 @@
   "keywords": [],
   "main": "dist/app.js",
   "scripts": {
-    "postinstall": "node ./scripts/helper.js",
-    "migrate": "npx prisma migrate dev --name init && prisma generate && pnpm seed",
-    "seed": "node ./prisma/seed.js",
+    "postinstall": "node ./scripts/env.js",
+    "orm:generate": "npx prisma generate",
+    "orm:migrate": "npx prisma migrate dev --name init",
+    "orm:seeds": "node ./prisma/seeds.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "node ./dist/main.js"

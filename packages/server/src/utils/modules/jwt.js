@@ -4,6 +4,7 @@ import jwt from 'koa-jwt'
 const { sign, verify } = jsonwebtoken
 
 export function genJWT(path = []) {
+  // console.log(path)
   return jwt({
     secret: import.meta.env.VITE_SECRET || 'JWT_SECRET',
     cookie: 'Authorization',
