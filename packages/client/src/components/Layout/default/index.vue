@@ -5,6 +5,10 @@ import SideBar from '../components/SideBar.vue'
 import AppTab from '../components/AppTab.vue'
 import { useAppStore } from '@/store'
 
+defineOptions({
+  name: 'DefaultLayout',
+})
+
 const appStore = useAppStore()
 </script>
 
