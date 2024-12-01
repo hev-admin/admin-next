@@ -13,10 +13,16 @@ const appStore = useAppStore()
 </script>
 
 <template>
-  <div w="full" h="full" flex>
+  <div
+    w="full"
+    h="full"
+    flex
+  >
     <aside
-      :w="appStore.menuHide ? '0' : (appStore.menuCollapsed ? '64' : '220')" transition="width 300"
-      :border-r="appStore.menuHide ? '' : '1 solid light-800 dark:gray-800'" flex="~ col"
+      :w="appStore.menuHide ? '0' : (appStore.menuCollapsed ? '64' : '220')"
+      transition="width 300"
+      :border-r="appStore.menuHide ? '' : '1 solid light-800 dark:gray-800'"
+      flex="~ col"
       :overflow="appStore.menuHide ? 'hidden' : 'visible'"
     >
       <SideBar />

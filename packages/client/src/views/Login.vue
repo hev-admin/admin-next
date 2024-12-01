@@ -80,49 +80,125 @@ async function handleLogin() {
 
 <template>
   <div
-    v-loading="loading" w-full h-full flex relative items-center justify-center bg-gradient-to-br from="[#667eea]"
+    v-loading="loading"
+    relative
+    h-full
+    w-full
+    flex
+    items-center
+    justify-center
+    bg-gradient-to-br
+    from="[#667eea]"
     to="[#764ba2]"
   >
     <el-card w-720>
-      <div w-full h-full flex items-center>
-        <div h-full flex="~ 1" justify-center items-center py-80>
-          <img w="3/4" :src="loginPicture" alt="login picture">
+      <div
+        h-full
+        w-full
+        flex
+        items-center
+      >
+        <div
+          flex="~ 1"
+          h-full
+          items-center
+          justify-center
+          py-80
+        >
+          <img
+            w="3/4"
+            :src="loginPicture"
+            alt="login picture"
+          >
         </div>
-        <div flex="~ col 1" items-center>
-          <div w-full flex items-center justify-center>
+        <div
+          flex="~ col 1"
+          items-center
+        >
+          <div
+            w-full
+            flex
+            items-center
+            justify-center
+          >
             <main-logo size="48" />
-            <div ml-10 font="700" whitespace="nowrap" text="#64aaff 24">
+            <div
+              ml-10
+              font="700"
+              whitespace="nowrap"
+              text="#64aaff 24"
+            >
               {{ title }}
             </div>
           </div>
-          <div h-300 px-40 pt-20 flex="~ col" justify-between>
-            <el-input v-model="username" type="text" :prefix-icon="User" size="large" placeholder="请输入用户名" />
+          <div
+            flex="~ col"
+            h-300
+            justify-between
+            px-40
+            pt-20
+          >
             <el-input
-              v-model="password" type="password" :prefix-icon="Lock" :show-password="showPassword" size="large"
+              v-model="username"
+              type="text"
+              :prefix-icon="User"
+              size="large"
+              placeholder="请输入用户名"
+            />
+            <el-input
+              v-model="password"
+              type="password"
+              :prefix-icon="Lock"
+              :show-password="showPassword"
+              size="large"
               placeholder="请输入密码"
             >
               <template #suffix>
                 <i
-                  cursor-pointer :class="showPassword ? 'i-ep:view' : 'i-ep:hide'"
+                  cursor-pointer
+                  :class="showPassword ? 'i-ep:view' : 'i-ep:hide'"
                   @click="showPassword = !showPassword"
                 />
               </template>
             </el-input>
-            <div flex items-center>
-              <el-input v-model="captcha" type="text" :prefix-icon="CircleCheck" size="large" placeholder="请输入验证码" />
-              <img h-38 ml-10 cursor-pointer :src="captchaImg" alt="captcha" @click="refreshCaptcha">
+            <div
+              flex
+              items-center
+            >
+              <el-input
+                v-model="captcha"
+                type="text"
+                :prefix-icon="CircleCheck"
+                size="large"
+                placeholder="请输入验证码"
+              />
+              <img
+                ml-10
+                h-38
+                cursor-pointer
+                :src="captchaImg"
+                alt="captcha"
+                @click="refreshCaptcha"
+              >
             </div>
             <el-checkbox v-model="isRemember">
               记住我
             </el-checkbox>
-            <el-button type="primary" size="large" @click="handleLogin">
+            <el-button
+              type="primary"
+              size="large"
+              @click="handleLogin"
+            >
               登录
             </el-button>
           </div>
         </div>
       </div>
     </el-card>
-    <div absolute bottom-20>
+    <div
+      absolute
+      bottom-20
+    >
       Copyright © {{ year > 2024 ? `2024-${year}` : '2024' }} Allen Huang
     </div>
   </div>

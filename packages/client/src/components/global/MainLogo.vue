@@ -11,6 +11,11 @@ defineProps({
 
 <template>
   <div :style="{ width: `${size}px`, height: `${size}px` }">
-    <img w="full" h="full" :src="logo" alt="Logo">
+    <img
+      w="full"
+      h="full"
+      :src="logo"
+      alt="Logo"
+    >
   </div>
 </template>

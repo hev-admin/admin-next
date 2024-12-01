@@ -5,14 +5,35 @@ import { ElDropdownItem } from 'element-plus'
 
 <template>
   <el-dropdown trigger="click">
-    <el-avatar cursor-pointer :size="30" :icon="UserFilled" />
+    <el-avatar
+      cursor-pointer
+      :size="30"
+      :icon="UserFilled"
+    />
     <template #dropdown>
-      <div px="16" pt="10" flex items-center>
-        <el-avatar :size="32" :icon="UserFilled" />
-        <div flex="~ col" ml="10">
-          <div flex items-center>
+      <div
+        px="16"
+        pt="10"
+        flex
+        items-center
+      >
+        <el-avatar
+          :size="32"
+          :icon="UserFilled"
+        />
+        <div
+          flex="~ col"
+          ml="10"
+        >
+          <div
+            flex
+            items-center
+          >
             <div>Hev</div>
-            <el-tag size="small" ml="10">
+            <el-tag
+              size="small"
+              ml="10"
+            >
               Pro
             </el-tag>
           </div>
@@ -22,18 +43,27 @@ import { ElDropdownItem } from 'element-plus'
         </div>
       </div>
       <el-dropdown-menu>
-        <ElDropdownItem :icon="Document" :divided="true">
+        <ElDropdownItem
+          :icon="Document"
+          :divided="true"
+        >
           文档
         </ElDropdownItem>
         <ElDropdownItem>
-          <div flex items-center>
+          <div
+            flex
+            items-center
+          >
             <i i-bxl:github />GitHub
           </div>
         </ElDropdownItem>
         <ElDropdownItem :icon="QuestionFilled">
           问题 & 帮助
         </ElDropdownItem>
-        <ElDropdownItem :icon="UserFilled" :divided="true">
+        <ElDropdownItem
+          :icon="UserFilled"
+          :divided="true"
+        >
           <router-view to="/profile">
             个人资料
           </router-view>
@@ -41,7 +71,10 @@ import { ElDropdownItem } from 'element-plus'
         <ElDropdownItem :icon="Tools">
           系统设置
         </ElDropdownItem>
-        <ElDropdownItem :icon="SwitchButton" :divided="true">
+        <ElDropdownItem
+          :icon="SwitchButton"
+          :divided="true"
+        >
           退出登录
         </ElDropdownItem>
       </el-dropdown-menu>

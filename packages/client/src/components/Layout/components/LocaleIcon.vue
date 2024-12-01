@@ -12,7 +12,11 @@ const appStore = useAppStore()
     </icon-card>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item v-for="(item, index) in locales" :key="index" @click="appStore.setLocale(item.key)">
+        <el-dropdown-item
+          v-for="(item, index) in locales"
+          :key="index"
+          @click="appStore.setLocale(item.key)"
+        >
           <span :class="{ current: appStore.localeKey === item.key }">{{ item.text }}</span>
         </el-dropdown-item>
       </el-dropdown-menu>

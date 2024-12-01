@@ -9,11 +9,18 @@ export default antfu(
     unocss: true,
     rules: {
       'no-console': 'warn',
+      'vue/max-attributes-per-line': [
+        'warn',
+        {
+          singleline: 1,
+          multiline: 1,
+        },
+      ],
     },
   },
   ...compat.config({
     extends: [
-      './.eslintrc-auto-import.json',
+      '.eslintrc-auto-import.json',
     ],
   }),
 )

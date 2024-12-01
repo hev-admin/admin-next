@@ -27,7 +27,10 @@ watch(route, async () => {
 
 <template>
   <div h="[calc(100vh-100px)]">
-    <el-scrollbar h-full w-full>
+    <el-scrollbar
+      h-full
+      w-full
+    >
       <el-menu
         :collapse="appStore.menuCollapsed"
       />

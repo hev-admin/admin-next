@@ -1,5 +1,9 @@
 <template>
-  <div w-full h-full overflow-hidden>
+  <div
+    h-full
+    w-full
+    overflow-hidden
+  >
     <slot />
   </div>
 </template>

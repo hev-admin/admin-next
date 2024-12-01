@@ -44,10 +44,16 @@ onMounted(() => {
 
 <template>
   <el-config-provider :locale="appStore.locale.component">
-    <router-view v-if="Layout" v-slot="{ Component }">
+    <router-view
+      v-if="Layout"
+      v-slot="{ Component }"
+    >
       <component :is="Layout">
         <keep-alive :include="keepAliveNames">
-          <component :is="Component" :key="route.fullPath" />
+          <component
+            :is="Component"
+            :key="route.fullPath"
+          />
         </keep-alive>
       </component>
       <SettingsDrawer />
