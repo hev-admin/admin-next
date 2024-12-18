@@ -1,5 +1,5 @@
 import { resolve } from 'node:path'
-import process, { cwd } from 'node:process'
+import { cwd } from 'node:process'
 import Koa from 'koa'
 import bodyParser from 'koa-bodyparser'
 import error from 'koa-json-error'
@@ -7,7 +7,6 @@ import responseTime from 'koa-response-time'
 import Static from 'koa-static'
 import { genJWT, genSession, log, logger } from '@/utils'
 import setupRouters, { whiteList } from '@/controller'
-import { prisma } from '~/prisma/client'
 
 const app = new Koa()
 
@@ -32,8 +31,3 @@ if (import.meta.env.PROD) {
 }
 
 export const viteNodeApp = app
-
-process.on('SIGINT', () => {
-  console.log('Prisma disconnected')
-  prisma && prisma.$disconnect()
-})

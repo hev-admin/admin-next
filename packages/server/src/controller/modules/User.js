@@ -1,5 +1,4 @@
 import { verifyJWT } from '@/utils'
-import { prisma } from '~/prisma/client'
 
 export async function getUserInfo(ctx, next) {
   // console.log(ctx.headers.authorization)
@@ -7,19 +6,9 @@ export async function getUserInfo(ctx, next) {
 
   const { id } = verifyJWT(token)
 
-  // console.log(id)
+  console.log(id)
 
-  const user = await prisma.user.findUnique({
-    where: {
-      id,
-    },
-    select: {
-      id: true,
-      username: true,
-      email: true,
-      phone: true,
-    },
-  })
+  const user = null
 
   ctx.status = 200
   ctx.body = {

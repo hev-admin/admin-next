@@ -1,3 +1,4 @@
 .env
 pm2.json
 prisma/migrations
+database
